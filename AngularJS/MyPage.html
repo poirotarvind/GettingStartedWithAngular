@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+    <title> Angular Js </title>
+    <script src="Scripts/angular.min.js"></script>
+
+	<meta charset="utf-8" />
+</head>
+<body>
+    Angular Js is a Single Page Application Framework
+    <br />
+    <br />
+ 
+    Name : <input type="text" data-ng-model="name"/> {{name}}
+    <br />
+    <br />
+    <h3>Loop through all the list Items using ng-Repeat Directive </h3>
+    <div class="container"
+         data-ng-init="names=['Nishath','Aravind','Baby','Baba']">
+          <ul>
+              <li data-ng-repeat="everyname in names">{{ everyname}}</li>
+          </ul>
+    </div>
+    <br />
+    <br />    
+    <h3>Loop through list Objects by ordering using ng-repeat directive - Ordering and Filtering</h3>
+    <div data-ng-init="customer=[
+         {name:'Jebestin ',Locality:'Hyderabad'},
+         {name:'Nishanth ',Locality:'Chennai'},
+         {name:'Antony ',Locality:'Banglore'}
+         ]">
+        <input type="text" data-ng-model="CustomerName" />
+        <ul>
+            <li data-ng-repeat="cus in customer | orderBy:'name' | filter:CustomerName"> {{ cus.name | uppercase }}- {{ cus.Locality | lowercase }} </li>
+        </ul>
+        
+    </div>
+    <br />
+   
+    <h3>Creating Views and Controllers</h3>
+    <script >
+        var demoApp = angular.module('demoApp', []);           
+        demoApp.controller("SimpleController", function ($scope) {
+            $scope.numbers = [
+                { nam: 'One', v: '1' },
+                { nam: 'Two', v: '2' },
+                { nam: 'Three', v: '3' },
+                { nam: 'Four', v: '4' }
+            ];
+        });
+    </script>
+    <div data-ng-controller="SimpleController">    
+        <br />
+        <input type="text" data-ng-model="nam" />   
+        <ul>
+            <li data-ng-repeat="va in numbers | filter:nam |orderBy:'nam' ">{{ va.nam }} = {{ va.v}}</li>
+        </ul>   
+     </div>
+
+
+   
+</body>
+</html>

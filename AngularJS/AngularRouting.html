@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+    <title> Angular Js </title>
+    
+</head>
+<body>
+
+    <h3>Using Module config Routers for Combining Controllers and Views</h3>
+   <div> <div data-ng-view=""></div>
+    <!--place holder for the views -----your content will display here-->
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+
+    
+    <script>
+
+        // Define the Module
+        var demoApp = angular.module("demoApp", ['ngRoute']);
+        
+        // Define the Routing techniques to display in the above View
+        
+        demoApp.config(function ($routeProvider) {
+            $routeProvider.when('/',
+                                {
+                                    controller: 'SimpleController',
+                                    templateUrl: '/Screen/View1.html'
+                                })
+                          .when('/Nishanth',
+                                {
+                                    controller: 'SimpleController',
+                                    templateUrl: '/Screen/View2.html'
+                                })
+                          .otherwise({ redirectTo: '/' });
+        });
+
+        //Define the Controllers to be used
+       
+        demoApp.controller("SimpleController", function ($scope) {
+            $scope.numbers = [
+               { nam: 'One', v: '1' },
+               { nam: 'Two', v: '2' },
+               { nam: 'Three', v: '3' },
+               { nam: 'Four', v: '4' }];
+
+            $scope.addCustomer = function () {
+                $scope.numbers.push({ nam: $scope.newCustomer.name, v: $scope.newCustomer.city })
+            };
+        });
+
+    </script>
+   
+</body>
+</html>

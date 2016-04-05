@@ -1,0 +1,6 @@
+D:\Gits\MVC5Demos\mvc5Demos\FirstApplication\AngularJS\AngularJS\bin\AngularJS.dll.config
+D:\Gits\MVC5Demos\mvc5Demos\FirstApplication\AngularJS\AngularJS\bin\AngularJS.dll
+D:\Gits\MVC5Demos\mvc5Demos\FirstApplication\AngularJS\AngularJS\bin\AngularJS.pdb
+D:\Gits\MVC5Demos\mvc5Demos\FirstApplication\AngularJS\AngularJS\obj\Debug\AngularJS.dll
+D:\Gits\MVC5Demos\mvc5Demos\FirstApplication\AngularJS\AngularJS\obj\Debug\AngularJS.pdb
+D:\Gits\MVC5Demos\mvc5Demos\FirstApplication\AngularJS\AngularJS\obj\Debug\AngularJS.csprojResolveAssemblyReference.cache

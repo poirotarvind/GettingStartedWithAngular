@@ -1,0 +1,15 @@
+﻿<div class="container">
+    <h3> My Second Page : View2</h3>
+    Your Name:
+    <br />
+    <input type="text" data-ng-model="filter.name" />
+    <br />
+
+    <ul>
+        <li data-ng-repeat="number in numbers | filter:filter.name | orderBy:'nam'">
+            {{ number.nam}} = {{ number.v}}
+        </li>
+    </ul>
+    <br />
+
+</div>
